@@ -19,9 +19,6 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 ## Authors
 The list of contributors for those who participated in this project.
 
-## Contact
-Cou can get in touch with us through our email at heatharzardly@gmail.com.
-
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
 
