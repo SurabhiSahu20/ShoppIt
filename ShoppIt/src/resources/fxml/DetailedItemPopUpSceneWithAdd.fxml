@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../css/application.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.DetailedItemPopUpController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Text fx:id="detailedItemTitle" strokeType="OUTSIDE" strokeWidth="0.0" text="Item Title">
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </Text>
+            <GridPane fx:id="detailedItemGridPane">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="275.0" minWidth="10.0" prefWidth="209.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="351.0" minWidth="10.0" prefWidth="351.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="278.0" minHeight="10.0" prefHeight="247.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <VBox prefHeight="247.0" prefWidth="377.0" GridPane.columnIndex="1">
+                     <children>
+                        <Text fx:id="detailedItemPrice" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="info" text="Price:">
+                        </Text>
+                        <Text fx:id="detailedItemBrand" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="info" text="Brand:">
+                           <VBox.margin>
+                              <Insets bottom="20.0" />
+                           </VBox.margin>
+                        </Text>
+                        <Text fx:id="detailedItemDietClassification" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="info" text="Diet Classification: ">
+                        </Text>
+                        <Text fx:id="detailedItemWeight" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="info" text="Weight:">
+                        </Text>
+                        <Text fx:id="detailedItemTotalCalories" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="info" text="Total Calories:">
+                        </Text>
+                     </children>
+                     <padding>
+                        <Insets bottom="100.0" left="20.0" right="20.0" top="100.0" />
+                     </padding>
+                  </VBox>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="206.0" stroke="BLACK" strokeType="INSIDE" styleClass="rectangle" width="209.0" />
+                  <ImageView fx:id="detailedItemImage" fitHeight="166.0" fitWidth="193.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="75.0" />
+               </VBox.margin>
+            </GridPane>
+         </children>
+      </VBox>
+      <Button fx:id="detailedItemAddButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#addToList" prefHeight="50.0" prefWidth="500.0" styleClass="inverted" text="Add to List" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <Button fx:id="detailedItemExitButton" layoutX="60.0" layoutY="60.0" mnemonicParsing="false" onAction="#exitPopUp" prefHeight="24.0" prefWidth="35.0" styleClass="image" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <graphic>
+            <ImageView fx:id="arrowImageView" fitHeight="34.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/arrow_1.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</AnchorPane>
